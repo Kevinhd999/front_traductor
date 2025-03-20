@@ -1,21 +1,30 @@
-.tabs {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    background-color: #002b7f;
-    padding: 15px;
-  }
-  
-  button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  button.active {
-    border-bottom: 3px solid white;
-  }
-  
+/* Contenedor de botones */
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+/* Botones de los tabs */
+.tab-buttons button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.tab-buttons button:hover {
+  background-color: #0056b3;
+}
+
+/* Contenido de los tabs */
+.tab-content {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f9f9f9;
+}

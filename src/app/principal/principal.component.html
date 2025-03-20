@@ -1,1 +1,16 @@
-<app-tutorial></app-tutorial>
+<div class="tab-buttons">
+  <button (click)="selectedTab = 'menu'">Menú</button>
+  <button (click)="selectedTab = 'tutorial'">Tutorial</button>
+  <button (click)="selectedTab = 'manual'">Manual</button>
+</div>
+
+<div class="tab-content" *ngIf="selectedTab === 'menu'">
+  <app-menu></app-menu>
+</div>
+<div class="tab-content" *ngIf="selectedTab === 'tutorial'">
+  <app-tutorial></app-tutorial>
+</div>
+<div class="tab-content" *ngIf="selectedTab === 'manual'">
+  <app-manual></app-manual>
+</div>
+  
