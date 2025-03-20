@@ -1,14 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router'; // Importa RouterModule
+import { PrincipalComponent } from './principal/principal.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true, // Asegura que es un componente independiente
+  standalone: true,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  imports: [RouterModule] // IMPORTA RouterModule aquí
+  imports: [PrincipalComponent]
 })
 export class AppComponent {
   title = 'front-traductor';
 }
-
