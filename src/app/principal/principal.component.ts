@@ -1,20 +1,18 @@
   import { Component, OnInit } from '@angular/core';
+  import { CommonModule } from '@angular/common';
+  import { TutorialComponent } from './tutorial/tutorial.component';
+
 
   @Component({
     selector: 'app-principal',
     templateUrl: './principal.component.html',
-    styleUrls: ['./principal.component.css']
+    styleUrls: ['./principal.component.css'],
+    standalone: true,
+    imports: [CommonModule, TutorialComponent]
   })
   export class PrincipalComponent implements OnInit {
-    selectedTab: string = 'traductor'; // Tab predeterminado
-
     constructor() {
-      console.log("PrincipalComponent cargado");
      }
 
     ngOnInit() { }
-
-    selectTab(tab: string) {
-      this.selectedTab = tab;
-    }
   }

@@ -1,11 +1,1 @@
-<div class="tabs">
-  <button (click)="selectTab('video')" [class.active]="selectedTab === 'video'">VIDEO TUTORIAL</button>
-  <button (click)="selectTab('traductor')" [class.active]="selectedTab === 'traductor'">TRADUCTOR LSO</button>
-  <button (click)="selectTab('manual')" [class.active]="selectedTab === 'manual'">MANUAL DE USUARIO</button>
-</div>
-
-<div class="content">
-  <app-video-tutorial *ngIf="selectedTab === 'video'"></app-video-tutorial>
-  <app-traductor-lso *ngIf="selectedTab === 'traductor'"></app-traductor-lso>
-  <app-manual-usuario *ngIf="selectedTab === 'manual'"></app-manual-usuario>
-</div>
+<app-tutorial></app-tutorial>
