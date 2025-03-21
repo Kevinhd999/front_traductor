@@ -1,16 +1,23 @@
-<div class="tab-buttons">
-  <button (click)="selectedTab = 'menu'">Menú</button>
-  <button (click)="selectedTab = 'tutorial'">Tutorial</button>
-  <button (click)="selectedTab = 'manual'">Manual</button>
-</div>
+<div class = "content">
+  <div class="navbar">
+    <button (click)="selectedTab = 'tutorial'" [class.active]="selectedTab === 'tutorial'">VIDEO TUTORIAL</button>
+    <button (click)="selectedTab = 'traductor'" [class.active]="selectedTab === 'traductor'">TRADUCTOR LSO</button>
+    <button (click)="selectedTab = 'manual'" [class.active]="selectedTab === 'manual'">MANUAL DE USUARIO</button>
+  </div>
 
-<div class="tab-content" *ngIf="selectedTab === 'menu'">
-  <app-menu></app-menu>
+  <div class="tab-content" *ngIf="selectedTab === 'traductor'">
+    <h2>Bienvenido/a HandsSpeak</h2>
+    <div class="buttons-container">
+      <button>ENTRAR DE SEÑAS A TEXTO</button>
+      <button>ENTRAR AL ALFABETO</button>
+    </div>
+  </div>
+
+  <div class="tab-content" *ngIf="selectedTab === 'tutorial'">
+    <app-tutorial></app-tutorial>
+  </div>
+
+  <div class="tab-content" *ngIf="selectedTab === 'manual'">
+    <app-manual></app-manual>
+  </div>
 </div>
-<div class="tab-content" *ngIf="selectedTab === 'tutorial'">
-  <app-tutorial></app-tutorial>
-</div>
-<div class="tab-content" *ngIf="selectedTab === 'manual'">
-  <app-manual></app-manual>
-</div>
-  
