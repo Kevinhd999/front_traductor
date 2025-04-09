@@ -1,40 +1,7 @@
-/* Contenedor principal del tutorial */
-.tutorial-container {
-    text-align: center;
-    padding: 5%;
-    width: 80%;
-    margin: auto;
-    background-color: transparent;
-  }
-  
-  /* Título del tutorial */
-  .tutorial-title {
-    color: #003399;
-    font-size: 2rem; /* Escalable según el tamaño del texto base */
-    font-weight: bold;
-    margin-bottom: 2%;
-  }
-  
-  /* Texto descriptivo */
-  .tutorial-text {
-    font-size: 1.2rem;
-    color: #333;
-    line-height: 1.5;
-    margin-bottom: 2%;
-  }
-  
-  /* Contenedor del video */
-  .video-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 3%;
-  }
-  
-  /* Estilo del video */
-  .video-container video {
-    width: 50%;
-    height: 40%;
-    border-radius: 1.5rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-  }
-  
+.tutorial-container{
+  display: flex;
+      height: 100%;
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+}
