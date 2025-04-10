@@ -1,7 +1,11 @@
 .tutorial-container{
-  display: flex;
+      display: flex;
       height: 100%;
       width: 100%;
       flex-direction: column;
       align-items: center;
+}
+
+.tutorial-title {
+  color : blue
 }
