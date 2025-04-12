@@ -1,24 +1,20 @@
-/* Contenedor principal del manual */
 .manual-container {
     text-align: center;
     padding: 5%;
-    width: 80%;
+    width: 100vw;
+    height: 100vh;
     margin: auto;
   }
   
   /* Título del manual */
   .manual-title {
     color: #003399;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 2%;
   }
   
-  /* Contenedor del PDF */
-  .manual-content {
-    display: flex;
-    justify-content: center;
-    margin-top: 3%;
-    height: 60%;
+  .manual-pdf {
+    height: 70%;
+    width: 80%;
+
   }
+  
   

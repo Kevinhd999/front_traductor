@@ -12,5 +12,18 @@ import { MenuComponent } from './menu/menu.component';
   imports: [CommonModule, TutorialComponent, ManualComponent, MenuComponent]
 })
 export class PrincipalComponent {
-  selectedTab: string = 'menu';
+  selectedTab: string = 'traductor';
+  modalAbierto: string | null = null;
+
+  abrirModal(tipo: string): void {
+    this.modalAbierto = tipo;
+  }
+
+  cerrarModal(): void {
+    this.modalAbierto = null;
+  }
+
+  procesarSenia(): void {
+    console.log("Procesando seña..."); // Aquí conectas con tu lógica real
+  }
 }

@@ -1,23 +1,72 @@
-<div class = "content">
+<div class="content">
   <div class="navbar">
-    <img src="/src/multimedia/Logo .png" class="icon">
-    <button (click)="selectedTab = 'tutorial'" [class.active]="selectedTab === 'tutorial'">VIDEO TUTORIAL</button>
-    <button (click)="selectedTab = 'traductor'" [class.active]="selectedTab === 'traductor'">TRADUCTOR LSO</button>
-    <button (click)="selectedTab = 'manual'" [class.active]="selectedTab === 'manual'">MANUAL DE USUARIO</button>
+    <img src="/multimedia/Logo .png" class="icon" />
+    <button 
+    (click)="selectedTab = 'tutorial'" 
+    [class.active]="selectedTab === 'tutorial'" 
+    class="nav-btn">VIDEO TUTORIAL</button>
+  
+  <button 
+    (click)="selectedTab = 'traductor'" 
+    [class.active]="selectedTab === 'traductor'" 
+    class="nav-btn">TRADUCTOR LSO</button>
+  
+  <button 
+    (click)="selectedTab = 'manual'" 
+    [class.active]="selectedTab === 'manual'" 
+    class="nav-btn">MANUAL DE USUARIO</button>
+  
   </div>
 
-  <div class="tab-content" *ngIf="selectedTab === 'traductor'">
-    <h2>Bienvenido/a HandsSpeak</h2>
-    <div class="buttons-container">
-      <button>ENTRAR DE SEÑAS A TEXTO</button>
-      <button>ENTRAR AL ALFABETO</button>
+  <!-- MODAL SEÑAS -->
+  <div class="modal" *ngIf="modalAbierto === 'senas'">
+    <div class="modal-content">
+      <span class="close" (click)="cerrarModal()">&times;</span>
+      <h3>Señas a Texto</h3>
+
+      <div class="modal-body">
+        <!-- Cámara -->
+        <div class="camera-box">
+          <p>[ Cámara encendida aquí ]</p>
+        </div>
+
+        <!-- Resultado -->
+        <div class="result-box">
+          <p>[ Resultado del reconocimiento de señas ]</p>
+        </div>
+      </div>
+
+      <!-- Botón abajo -->
+      <div class="modal-footer">
+        <button (click)="procesarSenia()">Procesar Seña</button>
+      </div>
     </div>
   </div>
 
+  <!-- MODAL ALFABETO -->
+  <div class="modal" *ngIf="modalAbierto === 'alfabeto'">
+    <div class="modal-content">
+      <span class="close" (click)="cerrarModal()">&times;</span>
+      <h3>Alfabeto</h3>
+      <p>Contenido del modal del alfabeto.</p>
+    </div>
+  </div>
+
+  <!-- Contenido Traductor -->
+  <div class="tab-content" *ngIf="selectedTab === 'traductor'">
+    <h2>Bienvenido/a HandsSpeak</h2>
+    <div class="buttons-container">
+      <button (click)="abrirModal('senas')">ENTRAR DE SEÑAS A TEXTO</button>
+      <button (click)="abrirModal('alfabeto')">ENTRAR AL ALFABETO</button>
+    </div>
+  </div>
+
+  <!-- Tutorial -->
   <div class="tab-content" *ngIf="selectedTab === 'tutorial'">
     <app-tutorial></app-tutorial>
   </div>
 
+  <!-- Manual -->
   <div class="tab-content" *ngIf="selectedTab === 'manual'">
     <app-manual></app-manual>
   </div>
