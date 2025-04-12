@@ -1,4 +1,5 @@
 <div class="content">
+  <img src="/multimedia/fondo.jpeg" class="fondo">
   <div class="navbar">
     <img src="/multimedia/Logo .png" class="icon" />
     <button 
@@ -49,13 +50,18 @@
       <span class="close" (click)="cerrarModal()">&times;</span>
       <h3>Alfabeto</h3>
       <p>Contenido del modal del alfabeto.</p>
-      <img src="/multimedia/alfabeto.jpg" class="alfabeto">
+      <img src="/multimedia/alfabeto_guia.png" class="alfabeto">
+      <h6>Imagen sacada de ciapatcolombia</h6>
+      <a href="https://ciapatcolombia.org/producto/abecedario-lengua-de-senas/" target="_blank">
+        https://ciapatcolombia.org/producto/abecedario-lengua-de-senas/
+      </a>
+      
     </div>
   </div>
 
   <!-- Contenido Traductor -->
   <div class="tab-content" *ngIf="selectedTab === 'traductor'">
-    <h2>Bienvenido/a HandsSpeak</h2>
+    <h2>Bienvenido/a Talksings</h2>
     <div class="buttons-container">
       <button (click)="abrirModal('senas')">ENTRAR DE SEÑAS A TEXTO</button>
       <button (click)="abrirModal('alfabeto')">ENTRAR AL ALFABETO</button>
