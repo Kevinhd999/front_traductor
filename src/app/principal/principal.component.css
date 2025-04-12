@@ -27,7 +27,7 @@
 
 .icon {
   height: 100%;
-  width: 10%;
+  border-radius: 15px 15px 15px 15px;
 }
 
 .buttons-container {
