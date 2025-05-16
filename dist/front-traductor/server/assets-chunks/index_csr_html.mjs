@@ -1,0 +1,4 @@
+export default `<link rel="stylesheet" href="styles-TAZMSP2Z.css"><body ngcm="">
+    <app-root></app-root>
+  <script src="polyfills-FFHMD2TL.js" type="module"></script><script src="main-RITHCKPZ.js" type="module"></script></body>
+  `;
